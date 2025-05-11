@@ -7,7 +7,7 @@ Esta practica consiste **calcular del camino más corto entre dos vértices** (m
     <img width="60%" src="docs/assets/grafo.jpg"/>
 </div>
 
-La técnica usada en este caso es **BFS** ([Breadth-first search](https://es.wikipedia.org/wiki/B%C3%BAsqueda_en_anchura)) o "**búsqueda en anchura**"
+La técnica usada en este caso es **BFS** ([Breadth-first search](https://es.wikipedia.org/wiki/B%C3%BAsqueda_en_anchura)) o "**búsqueda en anchura**". Tambien se hace uso de [TDD](/src/src/test/java/practica5/AppTest.java) (desarrollo digido por pruebas).
 
 ### Uso
 
@@ -28,10 +28,9 @@ make maven_test
 <br>
 
 <p align="center">
-  <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/KhalidCEU/practica4_p2/refs/heads/main/docs/diagram.puml" alt="Class Diagram" width=30%>
+  <img src="http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/KhalidCEU/practica5_p2/refs/heads/main/docs/diagram.puml" alt="Class Diagram" width=30%>
 </p>
-
 
 ### Licencia
 
-Este proyecto está licenciado bajo la Licencia Apache 2.0
+Este proyecto está licenciado bajo la Licencia [Apache 2.0](/LICENSE)
