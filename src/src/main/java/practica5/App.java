@@ -6,6 +6,7 @@ package practica5;
  */
 public class App
 {
+    /** Método main (no usado) */
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
