@@ -9,6 +9,8 @@ Esta practica consiste **calcular del camino más corto entre dos vértices** (m
 
 La técnica usada en este caso es **BFS** ([Breadth-first search](https://es.wikipedia.org/wiki/B%C3%BAsqueda_en_anchura)) o "**búsqueda en anchura**". Tambien se hace uso de [TDD](/src/src/test/java/practica5/AppTest.java) (desarrollo digido por pruebas).
 
+> Para los tests del camino mas corto, [aquí](/docs/pruebas/) se puede encontrar una representación de esos grafos.
+
 ### Uso
 
 Para compilar el programa y ejecutarlo (incluye la ejecución de tests) :
