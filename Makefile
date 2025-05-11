@@ -13,7 +13,13 @@ MAIN_CLASS	=	$(MAIN_DIR).Principal
 
 SRC_DIR		=	./src
 
+ROOT_DIR  	=	.
+
 MVN_SOURCE	=	src
+
+MVN_TARGET_DIR	=	${MVN_SOURCE}/target
+
+MVN_JAVADOC_DIR	=	$(MVN_TARGET_DIR)/reports/apidocs
 
 OUT_DIR		=	bin
 
@@ -42,15 +48,6 @@ jar: compile
 	@echo "" >> manifest.txt
 	jar cvfm $(JAR_FILE) manifest.txt -C $(OUT_DIR) .
 
-create_maven:
-	mvn archetype:generate -DgroupId=${MVN_PROJNAME} -DartifactId=${MVN_SOURCE} -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
-
-maven_test:
-	cd src && mvn test
-
-maven_run:
-	cd src/ && mvn clean install
-
 runjar: jar
 	java -jar $(JAR_FILE)
 
@@ -60,6 +57,24 @@ javadoc: compile
 debug: compile
 	find $(SRC_DIR) -name *.java | xargs javac -g -cp $(OUT_DIR):$(LIB_DIR) -d $(OUT_DIR)
 	cd bin; jdb -sourcepath ../src
+
+######## MAVEN ONLY #######
+
+create_maven:
+	mvn archetype:generate -DgroupId=${MVN_PROJNAME} -DartifactId=${MVN_SOURCE} -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+maven_test:
+	cd src && mvn test
+
+maven_run:
+	cd src/ && mvn clean install
+
+maven_javadoc:
+	cd src/ && mvn javadoc:javadoc
+	mkdir -p $(ROOT_DIR)/javadoc
+	cp -r $(MVN_JAVADOC_DIR)/* $(ROOT_DIR)/javadoc/
+
+######################
 
 re: clean all
 

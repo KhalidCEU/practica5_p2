@@ -23,6 +23,14 @@ Para ejecutar únicamente los tests :
 make maven_test
 ```
 
+Para generar documentación con **Javadoc** :
+
+```
+make maven_javadoc
+```
+> Esto generará un directorio "javadoc" en la raìz.
+
+
 ### Diagrama UML
 
 <br>
