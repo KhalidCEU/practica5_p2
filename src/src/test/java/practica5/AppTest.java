@@ -19,6 +19,7 @@ public class AppTest
     /********************************\
 
     /* Test addVertex 1 */
+    /* Intentar añadir un nuevo vertice */
     /* Esperado : true */
     public void testAddVertex() {
         assertTrue(grafo.addVertex(1));
@@ -47,7 +48,7 @@ public class AppTest
     /********************************\
 
     /* Test addEdge */
-    /* Caso, creacion nuevo arco */
+    /* Caso: creacion nuevo arco */
     /* Esperado : true */
 
     private Integer i1 = 1;
@@ -61,11 +62,11 @@ public class AppTest
     }
 
     /* Test addEdge  */
-    /* Caso, añadido arco ya existente */
+    /* Caso : añadido arco ya existente */
     /* Esperado : false */
     public void testaddEdge2() {
         grafo.addEdge(i1, i2); // la primera vez daría true
-        assertFalse(grafo.addEdge(i1, i2)); // esta false
+        assertFalse(grafo.addEdge(i1, i2)); // la segunada vez debería dar false
     }
 
 
@@ -76,7 +77,7 @@ public class AppTest
 
     /* Test obtainAdjacents */
     /* Contiene adyacentes */
-    /* Esperado : true (1 adyacente) */
+    /* Esperado : true (probamos 1, y tiene 1 adyacente) */
     public void testObtainAdjacents() {
         grafo.addVertex(i1);
         grafo.addVertex(i2);
@@ -93,7 +94,7 @@ public class AppTest
 
     /* Test obtainAdjacents 2 */
     /* Nos retorna el buen numero de adyacentes ?*/
-    /* Esperado : true (3 adyacentes) */
+    /* Esperado : true (probamos 3, y tiene 3 adyacentes) */
     public void testObtainAdjacents2() {
         grafo.addVertex(i1);
         grafo.addVertex(i2);
@@ -113,7 +114,7 @@ public class AppTest
 
     /* Test obtainAdjacents 3 */
     /* Nos retorna el buen numero de adyacentes ?*/
-    /* Esperado : false (2 adyacentes)*/
+    /* Esperado : false (probamos 0, pero tiene 2 adyacentes) */
     public void testObtainAdjacents3() {
         grafo.addVertex(i1);
         grafo.addVertex(i2);
@@ -170,6 +171,8 @@ public class AppTest
     /********************************\
 
     /* Test camino mas corto */
+    /* Esperado : el camino mas corto entre 1 y 4 */
+    /*  aqui es 1 -> 4 -> 5 */
     public void testShortestPathFindsAPath() {
         System.out.println("\nTest shortestPathFindsAPath");
         System.out.println("----------------------------");
@@ -190,8 +193,8 @@ public class AppTest
     }
 
     /* Test camino mas corto 2 */
-    /* No hay relacione ntre 4 y 7 */
-    /* Esperado : null */
+    /* No hay relaciones entre los vertices 4 y 7 */
+    /* Esperado : null (no hay camino) */
     public void testShortestPathFindsAPath2() {
 
         Graph<Integer> g = new Graph<>();
@@ -206,8 +209,8 @@ public class AppTest
     }
 
     /* Test camino mas corto 3 */
-    /* Esperado : true (el camino mas corto entre 4 y 11 */
-    /*                  aqui es 4 -> 8 -> 3 -> 11  */
+    /* Esperado : el camino mas corto entre 4 y 11 */
+    /*  aqui es 4 -> 8 -> 3 -> 11  */
     public void testShortestPathFindsAPath3() {
 
         Graph<Integer> g = new Graph<>();
