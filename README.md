@@ -1,10 +1,9 @@
 ## Practica 5 - Programación 2
 
-
-Esta practica consiste **calcular del camino más corto entre dos vértices** (mediante implementación de un **[grafo](https://es.wikipedia.org/wiki/Grafo)**)
+Esta práctica consiste en **calcular el camino más corto entre dos vértices** mediante la implementación de un **[grafo](https://es.wikipedia.org/wiki/Grafo)**.
 
 <div align="center">
-    <img width="60%" src="docs/assets/grafo.jpg"/>
+    <img width="50%" src="docs/assets/grafo.jpg"/>
 </div>
 
 La técnica usada en este caso es **BFS** ([Breadth-first search](https://es.wikipedia.org/wiki/B%C3%BAsqueda_en_anchura)) o "**búsqueda en anchura**". Tambien se hace uso de [TDD](/src/src/test/java/practica5/AppTest.java) (desarrollo digido por pruebas).
